@@ -1,0 +1,44 @@
+13)Употребени команди:
+git checkout -b feature-search-books
+git add SI2026Lab1Main.java
+git commit -m "Implement book search"
+git push -u origin feature-search-books
+git checkout master
+git merge feature-search-books
+git log --oneline --graph --all
+
+Спојувањето беше од тип: Fast forward.
+
+Излез од командата git log --oneline --graph --all:
+User@DESKTOP-MLB5DOU MINGW64 ~/OneDrive/Desktop/SI_2026_Lab1_246023 (master)
+$ git log --oneline --graph --all
+* ae67fd9 (HEAD -> master, origin/feature-search-books, feature-search-books) Implement book search
+* 5c623bc (origin/master) Add starter code
+* 4431a22 Initial commit
+
+22)Настана конфликт при merge-от на master во feature-borrow-book.
+Конфликтот беше разрешен така што беше отстранета линијата код: Book checked out.
+Како и маркерите: <<<<<<< HEAD и >>>>>>> master
+Односно одбрав да ја задржам само верзијата од feature-borrow-book branch-от.
+За излез од Vim едиторот искористив: Esc -> :wq -> Enter.
+
+Употребена беше merge стратегијата: Recursive.
+
+Излез од командата git status:
+User@DESKTOP-MLB5DOU MINGW64 ~/OneDrive/Desktop/SI_2026_Lab1_246023 (feature-borrow-book)
+$ git status
+On branch feature-borrow-book
+Your branch is ahead of 'origin/feature-borrow-book' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+23)Спојувањето беше: Recursive.
+Fast-forward спојувањето се случува само ако тековната гранка нема commits што недостасуваат во гранката 
+што се спојува. Но во случајот, master веќе имал commits што не биле на feature-genre-report, па Git не 
+може едноставно да го помести покажувачот master напред. Наместо тоа, Git креирал commit за спојување 
+за да ги комбинира историите на master и feature-genre-report.
+
+24)И ова спојување беше: Recursive
+Повторно како претходно, master веќе имал commits кои не биле на feature-borrow-book, па Git креирал merge commit
+за да ги комбинира историите на master i feature-borrow book.
