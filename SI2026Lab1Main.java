@@ -53,6 +53,11 @@ class Library {
 
     // TODO: Implement in branch feature-search-books
     public boolean searchBookByTitle(String title) {
+        for (Book book : books) {
+            if (book.getTitle().equalsIgnoreCase(title)) {
+                return true;
+            }
+        }
         return false;
     }
 
@@ -120,5 +125,13 @@ public class SI2026Lab1Main {
         library.addBook(new Book("1984", "George Orwell", "Dystopian"));
 
         System.out.println("Library initialized.");
+
+        //Testing searchBookByTitle function
+        boolean found = library.searchBookByTitle("The Oddyssey");
+        if (found) {
+            System.out.println("Book found.");
+        } else {
+            System.out.println("Book not found.");
+        }
     }
 }
