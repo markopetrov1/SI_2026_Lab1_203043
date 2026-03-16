@@ -1,8 +1,8 @@
-
+//Updated by 246023
 import java.util.ArrayList;
 import java.util.List;
 
-class Book {//Updated by 246023
+class Book {
     private String title;
     private String author;
     private String genre;
