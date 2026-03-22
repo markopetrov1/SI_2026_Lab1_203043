@@ -101,6 +101,7 @@ class Library {
             }
         }
     }
+   // Updated by 243107
     public int countBooksByGenre(String genre) {
         int count = 0;
         for (Book book : books) {
