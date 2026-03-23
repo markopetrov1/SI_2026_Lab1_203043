@@ -93,6 +93,13 @@ class Library {
         System.out.println("Book not found.");
     }
 
+    // Updated by 246039
+    public void returnAllBooks() {
+      for(Book book : books) {
+        book.setBorrowed(false);
+      }
+    }
+
     // TODO: Implement in branch feature-genre-report
     public void printBooksByGenre(String genre) {
         for (Book book : books) {
