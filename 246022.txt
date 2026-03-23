@@ -1,0 +1,23 @@
+Филип Петровски
+filip.petrovski.7@students.finki.ukim.mk
+
+28) 
+- Од репозиториумот на линкот кликнав Fork со што се создаде fork на мојот GitHub.
+29)
+$ git clone https://github.com/Filip350351/SI_2026_Lab1_203043.git
+$ cd SI_2026_Lab1_203043
+- Клонирање на fork репозиториумот и влегување во папката на проектот
+30)
+$ git checkout -b 246022-library-update
+- Креираме нова гранка и се префрламе на неа
+33)
+$ git add 246022.txt SI2026Lab1Main.java
+$ git commit -m "Add fork contribution"
+- Ги додаваме промените и правиме commit
+34)
+$ git push -u origin 246022-library-update
+- Ја испраќаме гранката во fork-репозиториумот
+35) 
+- Го креираме Pull-request од гранката 246022-library-update кон master гранката на оригиналниот репозиториум
+36- 37) 
+- Додавање соодветен наслов и опис 
