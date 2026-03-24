@@ -25,7 +25,7 @@ class Book {
     public String getGenre() {
         return genre;
     }
-
+	//Updated by 243147
     public boolean isBorrowed() {
         return borrowed;
     }
