@@ -111,6 +111,8 @@ class Library {
         return count;
     }
 
+    // Updated by 246018
+
     // TODO: Optional additional method
     public int countAvailableBooks() {
         int count = 0;
