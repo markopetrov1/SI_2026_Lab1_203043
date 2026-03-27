@@ -1,0 +1,118 @@
+
+ДЕЛ 1
+1.
+mkdir SI_2026_Lab1_233031
+cd SI_2026_Lab1_233031
+git init
+
+2. 
+git remote add origin https://github.com/233031/SI_2026_Lab1_233031.git
+
+ 3. 
+echo "Sara Tosheva, 233031" > README.md
+git add README.md
+git commit -m "Initial commit"
+
+ 4.
+git add SI2026Lab1Main.java
+git commit -m "Add starter code"
+
+ 5.
+git push -u origin master
+
+6.
+git checkout -b feature-search-books
+
+7. 
+git add SI2026Lab1Main.java
+git commit -m "Implement book search"
+git add SI2026Lab1Main.java
+git commit -m "Add test calls for searchBookByTitle in main"
+git add SI2026Lab1Main.java
+git commit -m "Add searchBookByTitle method and main test calls"
+
+ 8. 
+git push -u origin feature-search-books
+
+9.
+git checkout master
+git merge feature-search-books
+
+
+Спојувањето на гранката feature-search-books со master беше fast-forward merge.
+Немаше конфликти бидејќи master немаше нови commit-и по креирањето на гранката.
+
+ 10.
+git push
+
+11. 
+git checkout -b feature-borrow-book
+git checkout master
+git checkout -b feature-genre-report
+
+ 12.
+git checkout feature-borrow-book
+git add SI2026Lab1Main.java
+git commit -m "Implement borrowBook method and main test calls"
+
+13.
+git checkout master
+git add SI2026Lab1Main.java
+git commit -m "Update borrow message on master"
+
+14.
+git checkout feature-genre-report
+git add SI2026Lab1Main.java
+git commit -m "Implement genre report"
+
+15.
+git push -u origin feature-borrow-book
+git push -u origin feature-genre-report
+
+16.
+git checkout feature-borrow-book
+git merge master
+
+
+При спојување на master во гранката feature-borrow-book не настана конфликт.
+Git автоматски ги спои промените бидејќи немаше изменети исти линии.
+
+
+
+17. 
+git checkout master
+git merge feature-genre-report
+
+
+Спојувањето на гранката feature-genre-report со master беше fast-forward merge.
+Немаше потреба од merge commit бидејќи master немаше нови commit-и.
+
+18. 
+git merge feature-borrow-book
+
+
+Спојувањето на гранката feature-borrow-book со master беше fast-forward merge.
+Немаше потреба од merge commit бидејќи master немаше нови commit-и.
+
+ 19. 
+git push
+
+ 20.
+git log --oneline --graph --all > logs.txt
+
+ 21. 
+type logs.txt
+
+ДЕЛ 2
+
+git clone https://github.com/Tosheva-Sara/SI_2026_Lab1_203043.git
+cd SI_2026_Lab1_203043
+git checkout -b 233031-library-update
+Додавање на 233031.txt со име и e-mail
+git add 233031.txt
+ Додадов краток коментар во Java датотека
+git add SI2026Lab1Main.java
+git commit -m "Add fork contribution"
+git push origin 233031-library-update
+Креирав Pull Request на GitHub
+
