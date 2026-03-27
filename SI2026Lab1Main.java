@@ -40,6 +40,7 @@ class Book {
     }
 }
 
+// Updated by 213050
 class Library {
     private List<Book> books;
 
@@ -51,7 +52,6 @@ class Library {
         books.add(book);
     }
 
-    // TODO: Implement in branch feature-search-books
     public boolean searchBookByTitle(String title) {
         for (Book book : books) {
             if (book.getTitle().equalsIgnoreCase(title)) {
@@ -61,7 +61,6 @@ class Library {
         return false;
     }
 
-    // TODO: Implement in branch feature-borrow-book
     public void borrowBook(String title) {
         for (Book book : books) {
             if (book.getTitle().equalsIgnoreCase(title)) {
@@ -77,7 +76,6 @@ class Library {
         System.out.println("Book not found.");
     }
 
-    // TODO: Optional additional method
     public void returnBook(String title) {
         for (Book book : books) {
             if (book.getTitle().equalsIgnoreCase(title)) {
@@ -93,7 +91,6 @@ class Library {
         System.out.println("Book not found.");
     }
 
-    // TODO: Implement in branch feature-genre-report
     public void printBooksByGenre(String genre) {
         for (Book book : books) {
             if (book.getGenre().equalsIgnoreCase(genre)) {
@@ -101,17 +98,7 @@ class Library {
             }
         }
     }
-    public int countBooksByGenre(String genre) {
-        int count = 0;
-        for (Book book : books) {
-            if (book.getGenre().equalsIgnoreCase(genre)) {
-                count++;
-            }
-        }
-        return count;
-    }
 
-    // TODO: Optional additional method
     public int countAvailableBooks() {
         int count = 0;
         for (Book book : books) {
@@ -122,7 +109,6 @@ class Library {
         return count;
     }
 
-    // TODO: Optional additional method
     public void printBorrowedBooks() {
         for (Book book : books) {
             if (book.isBorrowed()) {
@@ -146,9 +132,8 @@ public class SI2026Lab1Main {
         System.out.println("Search Clean Code: " + library.searchBookByTitle("Clean Code"));
         System.out.println("Search Harry Potter: " + library.searchBookByTitle("Harry Potter"));
 
-        library.printBooksByGenre("Programming");
         library.borrowBook("The Hobbit");
 
-        System.out.println("Programming books: " + library.countBooksByGenre("Programming"));
+        library.printBooksByGenre("Programming");
     }
 }
