@@ -1,0 +1,124 @@
+213050.txt
+Документација за првата лабораториска вежба по Софтверско Инженерство 
+
+Имав веќе креиран профил на GitHub , исто така и на git bash . Потоа промената почна од чекорите 4 и 5 , направено е следново :
+Креиран е локален директориум со исто име како оддалечениот репозиториум, Git е иницијализиран со git init, и локалниот репозиториум е поврзан со оддалечениот преку git remote add origin.Потоа за следните чекори додадена е README.md датотека со лични податоци и Java изворниот код, направени се два commit-и со соодветни пораки. Потоа гранката master е синхронизирана со оддалечениот репозиториум преку git push -u origin master, при што флагот -u го поставува upstream tracking.
+Чекор 9:
+Команда: git checkout -b feature-search-books
+Објаснување: Креирана е нова гранка feature-search-books и веднаш е извршено 
+префрлување на неа со флагот -b.
+
+Чекор 10:
+Команда: git add SI2026Lab1Main.java && git commit -m "Implement book search"
+Објаснување: Имплементиран е методот searchBookByTitle кој пребарува книга по 
+наслов и враќа true ако постои, false ако не постои. Додаден е тест повик во 
+main методот. Направен е commit со порака "Implement book search".
+
+Чекор 11:
+Команда: git push -u origin feature-search-books
+Објаснување: Гранката feature-search-books е синхронизирана со оддалечениот 
+репозиториум. На GitHub е креиран Pull Request од feature-search-books кон master 
+со наслов "Implement book search".
+
+Чекор 12:
+Команди: git checkout master
+         git merge feature-search-books
+Објаснување: Извршено е префрлување на master гранката и спојување со 
+feature-search-books гранката.
+
+Чекор 13:
+Команда: git log --oneline --graph --all
+Објаснување: Спојувањето беше fast-forward бидејќи master немаше нови commits 
+од моментот кога е креирана feature-search-books гранката. Git само го помести 
+master покажувачот напред без да креира merge commit. Немаше конфликти при 
+спојувањето.
+
+Излез од git log --oneline --graph --all:
+[ 9c50d5f (HEAD -> master, origin/feature-search-books, feature-search-books) Implement book search
+* 1d88d38 (origin/master) Add starter code
+* 9069a10 Initial commit]
+Спојувањето беше fast-forward — Git само го помести master покажувачот напред без да креира merge commit. Немаше конфликти
+
+
+Чекор 14:
+Команда: git push origin master
+Објаснување: Гранката master е синхронизирана со оддалечениот репозиториум. 
+Излезот покажа Total 0 бидејќи merge-от беше fast-forward и немало нови 
+објекти за испраќање.
+
+Чекор 15:
+Команди: git branch feature-borrow-book
+          git branch feature-genre-report
+Објаснување: Креирани се две нови гранки од master: feature-borrow-book за 
+имплементација на позајмување книги и feature-genre-report за извештај по жанр.
+
+Чекор 16:
+Команди: git checkout feature-borrow-book
+          git add SI2026Lab1Main.java && git commit -m "Implement borrow book"
+Објаснување: Извршено е префрлување на гранката feature-borrow-book. 
+Имплементиран е методот borrowBook кој означува книга како позајмена според 
+наслов, со порака "Borrowed successfully" при успешно позајмување. Додаден е 
+тест повик во main методот. Направен е commit со порака "Implement borrow book".
+Чекор 17:
+Команди: git checkout master
+         git add SI2026Lab1Main.java && git commit -m "Update borrow message on master"
+Објаснување: Префрлено е на master гранката и променета е пораката за успешно 
+позајмување од "Borrowed successfully" во "Book checked out". Направен е commit 
+со порака "Update borrow message on master".
+
+Чекор 18:
+Команди: git checkout feature-genre-report
+         git add SI2026Lab1Main.java && git commit -m "Implement genre report"
+Објаснување: Префрлено е на feature-genre-report гранката и имплементиран е 
+методот printBooksByGenre кој ги печати сите книги од даден жанр. Додаден е 
+тест повик во main методот.
+
+Чекор 19:
+Команди: git checkout feature-borrow-book
+         git push -u origin feature-borrow-book
+Објаснување: Гранката feature-borrow-book е синхронизирана со оддалечениот 
+репозиториум и на GitHub е креиран Pull Request кон master.
+
+Чекор 20:
+Команди: git checkout feature-genre-report
+         git push -u origin feature-genre-report
+Објаснување: Гранката feature-genre-report е синхронизирана со оддалечениот 
+репозиториум и на GitHub е креиран Pull Request кон master.
+
+Чекор 21:
+Команди: git checkout feature-borrow-book
+         git merge master
+Објаснување: Извршено е спојување на master во feature-borrow-book.
+
+Чекор 22:
+Настанал конфликт во методот borrowBook во датотеката SI2026Lab1Main.java.
+Конфликтот настанал затоа што master имаше порака "Book checked out" додека 
+feature-borrow-book имаше порака "Borrowed successfully" на истата линија.
+Конфликтот е решен рачно со отворање на фајлот во IntelliJ, отстранување на 
+конфликт маркерите и задржување на пораката "Borrowed successfully".
+Употребена стратегија: recursive merge.
+
+Излез од git status:
+On branch feature-borrow-book
+Your branch is ahead of 'origin/feature-borrow-book' by 2 commits.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+Чекор 23:
+Команди: git checkout master
+         git merge feature-genre-report
+Објаснување: Спојувањето беше recursive merge бидејќи master добил нов commit 
+во Чекор 17 откако е креирана feature-genre-report гранката. Git создаде merge 
+commit за да ги споји двете линии на развој. Немаше конфликти.
+
+Чекор 24:
+Команда: git merge feature-borrow-book
+Објаснување: Спојувањето беше recursive merge бидејќи feature-borrow-book 
+содржеше merge commit од Чекор 21. Git создаде merge commit за да ги споји 
+историите. Доколку се појави конфликт, решете го со задржување на саканата 
+верзија на пораката.
+
+
+
+
+
+
