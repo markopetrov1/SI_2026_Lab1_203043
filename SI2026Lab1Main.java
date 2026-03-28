@@ -13,7 +13,7 @@ class Book {
         this.genre = genre;
         this.borrowed = false;
     }
-
+    // Updated by 237044
     public String getTitle() {
         return title;
     }
