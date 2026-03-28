@@ -39,7 +39,7 @@ class Book {
         return "Title: " + title + ", Author: " + author + ", Genre: " + genre + ", Borrowed: " + borrowed;
     }
 }
-
+// Updated by 243069
 class Library {
     private List<Book> books;
 
@@ -60,7 +60,7 @@ class Library {
         }
         return false;
     }
-
+    
     // TODO: Implement in branch feature-borrow-book
     public void borrowBook(String title) {
         for (Book book : books) {
