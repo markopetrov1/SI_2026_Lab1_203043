@@ -1,16 +1,19 @@
-*   23f2855 Merge branch 'feature-borrow-book'
+*   29b96a8 Resolve merge conflict in main class
 |\  
-| *   7fcbb19 Merge branch 'master' into feature-borrow-book
+| *   e5a4365 Merge branch 'master' into feature-borrow-book
 | |\  
-| * | 6f50b6b Implement borrow book
-* | |   1f158c2 Merge branch 'feature-genre-report'
+| * | fe5077d Implement borrow book
+* | |   2783294 Merge branch 'feature-genre-report'
 |\ \ \  
 | |_|/  
 |/| |   
-| * | 9416caf Implement genre report
+| * | 069f99a Implement genre report
+| * | afac840 Implement genre report
 | |/  
-* / b820ffb Update borrow message on master
+* | 5391327 Merge branch 'master' of https://github.com/acekostovski/SI_2026_Lab1_233299
+|\| 
+| * 347e7b8 Implement book search
+* | da1c5fe Implement book search
 |/  
-* 061de44 Implement book search
-* 84d8261  Add starter code
-* 3956d9e Initial commit
+* 4db9a59 Add starter code
+* 4334c5d Initial commit
