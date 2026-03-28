@@ -140,8 +140,8 @@ public class SI2026Lab1Main {
         library.addBook(new Book("Effective Java", "Joshua Bloch", "Programming"));
         library.addBook(new Book("The Hobbit", "J.R.R. Tolkien", "Fantasy"));
         library.addBook(new Book("1984", "George Orwell", "Dystopian"));
-
-        System.out.println("Library initialized.");
+	//Updated by 246047
+        System.out.println("Library initialized!!!");
 
         System.out.println("Search Clean Code: " + library.searchBookByTitle("Clean Code"));
         System.out.println("Search Harry Potter: " + library.searchBookByTitle("Harry Potter"));
