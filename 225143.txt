@@ -1,0 +1,43 @@
+Stepan Kunevski
+stepan.kunevski@students.finki.ukim.mk
+
+
+ Git commands and explanations for Lab 1, Part 2 & 3 (Fork workflow)
+
+## Created new branch for library update
+git checkout -b 225143-library-update
+# Explanation: I created a new branch in my fork to safely make changes without affecting master.
+
+## Made changes to files
+git add 225143.txt SI2026Lab1Main.java
+git commit -m "Add fork contribution"
+# Explanation: Added documentation file and updated Java code with comment.
+
+## Pushed branch to my fork
+git push -u origin 225143-library-update
+# Explanation: Pushed my branch to my fork on GitHub to prepare a pull request.
+
+## Pull request
+URL: https://github.com/markopetrov1/SI_2026_Lab1_203043/pull/246
+# Explanation: Created pull request from my fork branch 225143-library-update to the original repo master branch.
+# PR title: 225143-FORK
+# Description:
+Stepan Kunevski
+Fork contribution for lab 1
+
+## Update master branch with fork changes
+git checkout master
+git pull origin master
+# Explanation: Pulled all changes from the forked repository to ensure my local master is up-to-date.
+
+## Created logs.txt with commit history
+git log --oneline --graph --all > logs.txt
+git add logs.txt
+git commit -m "Add logs.txt with commit history"
+git push origin master
+# Explanation: Saved a visual graph of all commits to logs.txt, committed, and pushed it.
+
+# Notes:
+- No merge conflicts occurred during the pull.
+- All changes are cleanly added to my fork.
+- Pull request is ready and awaiting merge by the assistant
