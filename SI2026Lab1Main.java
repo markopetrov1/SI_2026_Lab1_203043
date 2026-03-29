@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Book {
+    // Updated by 171113
     private String title;
     private String author;
     private String genre;
@@ -101,6 +102,7 @@ class Library {
             }
         }
     }
+
     public int countBooksByGenre(String genre) {
         int count = 0;
         for (Book book : books) {
