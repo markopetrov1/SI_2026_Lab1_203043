@@ -1,16 +1,22 @@
-*   23f2855 Merge branch 'feature-borrow-book'
+* af6ae27 Fix logs.txt on master
+* 5db34fa Fix logs.txt
+* eb5b8ff force update fork contribution
+* 47d359b FORCE FIX
+* b426509 Add fork contribution
+* 01ccd6e fix merge commit messages in logs.txt
+* 198dd81 fix merge commit messages in logs.txt
+* 8f3a195 Count books by genre
+* 5c399bb Final commit
+*   d59b8b0 Merge branch 'feature-borrow-book'
 |\  
-| *   7fcbb19 Merge branch 'master' into feature-borrow-book
+| *   e4cd1e9 Merge branch 'master' into feature-borrow-book
 | |\  
-| * | 6f50b6b Implement borrow book
-* | |   1f158c2 Merge branch 'feature-genre-report'
-|\ \ \  
-| |_|/  
-|/| |   
-| * | 9416caf Implement genre report
+| * | d138cc7 Implement borrow book
+* | | d708195 Implement genre report
 | |/  
-* / b820ffb Update borrow message on master
+|/|   
+* | 755199d Update borrow message on master
 |/  
-* 061de44 Implement book search
-* 84d8261  Add starter code
-* 3956d9e Initial commit
+* acecd5a Implement book search
+* 3612eac Add starter code
+* cdc8b22 Initial commit

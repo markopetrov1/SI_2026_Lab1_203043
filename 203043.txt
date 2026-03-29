@@ -1,0 +1,27 @@
+Commands used:
+
+git checkout -b feature-search-books
+git commit -m "Implement book search"
+git push origin feature-search-books
+git checkout master
+git merge feature-search-books
+
+Merge type:
+Fast-forward, because master had no new commits.
+
+git checkout -b feature-borrow-book
+git checkout -b feature-genre-report
+
+git commit -m "Implement borrow book"
+git commit -m "Update borrow message on master"
+git commit -m "Implement genre report"
+
+Conflict:
+Yes, conflict occurred in borrowBook method.
+
+Resolution:
+Resolved manually by choosing:
+System.out.println("You borrowed: " + book.getTitle());
+
+Merge strategy:
+Recursive (three-way merge)
