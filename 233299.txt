@@ -1,2 +1,76 @@
 Aleksandar Kostovski
 aleksandar.kostovski@students.finki.ukim.mk 
+
+I DEL
+
+git checkout -b feature-search-books
+git add .
+git commit -m "Implement book search"
+git push -u origin feature-search-books
+git checkout master
+git merge feature-search-books
+
+Merge type: fast-forward
+No conflicts occurred
+
+git log --oneline --graph --all:
+* 347e7b8 Implement book search
+* 4db9a59 Add starter code
+* 4334c5d Initial commit
+
+II DEL
+
+A merge conflict occurred while merging master into feature-borrow-book.
+
+The conflict was resolved manually by keeping the borrow book implementation 
+and removing duplicate changes from master.
+
+Merge strategy used: recursive (ort strategy)
+
+git status after merge:
+On branch feature-borrow-book
+Your branch is up to date with 'origin/feature-borrow-book'.
+working tree clean
+
+III DEL
+
+The merge of feature-genre-report into master was fast-forward because master 
+had no new commits after branching.
+
+The history was linear so no new merge commit was created.
+
+DEL IV
+
+The merge of feature-borrow-book into master was recursive (3-way merge) 
+because both branches had diverged changes.
+
+DEL V
+
+git log --oneline --graph --all:
+
+* 29b96a8 Resolve merge conflict in main class
+* e5a4365 Merge branch 'master' into feature-borrow-book
+* fe5077d Implement borrow book
+* 2783294 Merge branch 'feature-genre-report'
+* 069f99a Implement genre report
+* afac840 Implement genre report
+* 5391327 Merge branch 'master' of GitHub
+* 347e7b8 Implement book search
+* da1c5fe Add starter code
+* 4334c5d Initial commit
+
+DEL VI
+
+Fork repository was cloned locally.
+A new branch 233299-library-update was created.
+Changes were committed and pushed successfully.
+
+git checkout -b 233299-library-update
+git add .
+git commit -m "Add fork contribution"
+git push origin 233299-library-update
+
+PR title: 233299-FORK
+
+Line 1: Aleksandar Kostovski
+Line 2: Fork contribution for lab 1
