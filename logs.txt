@@ -1,3 +1,4 @@
+* 5db34fa Fix logs.txt
 * eb5b8ff force update fork contribution
 * 47d359b FORCE FIX
 * b426509 Add fork contribution
