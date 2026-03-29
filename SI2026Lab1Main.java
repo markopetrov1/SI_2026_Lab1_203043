@@ -132,7 +132,7 @@ class Library {
     }
 }
 
-public class SI2026Lab1Main {
+public class SI2026Lab1Main { 
     public static void main(String[] args) {
         Library library = new Library();
 
@@ -152,3 +152,4 @@ public class SI2026Lab1Main {
         System.out.println("Programming books: " + library.countBooksByGenre("Programming"));
     }
 }
+// Updated by 243196
